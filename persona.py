@@ -78,12 +78,10 @@ class Persona:
         self._skills = skills
 
     def __repr__(self):
-        s = f"""
-Name: {self.name}
-HP: {self.hp}\t SP: {self.sp}
-        """
+        s = f"Name: {self.name}\n"
+        s += f"HP: {self.hp}\t SP: {self.sp}\nSkills:"
         for skill in self._skills:
-            s += "\t" + str(skill) + "\n"
+            s += str(skill) + "\n"
         return s
 
 
@@ -101,4 +99,4 @@ def damage_model(skill, personas):
             if skill.element == resistance.element:
                 damage *= resistance.resistance.value
                 damages.append((damage, resistance.resistance))
-        persona.hp(persona.hp - damage)
+        persona.hp = persona.hp - damage

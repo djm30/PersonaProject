@@ -13,8 +13,7 @@ class Skill:
     # No need for getters and setters, will not be changing after initializtion
 
     def __repr__(self):
-        s = ""
-        s += f"Name: {self.name}\n"
-        s += f"Cost: {self.cost} \t Damage: {self.damage}\n"
-        s += f"Element: {self.element.value}\t Muli Target: {self.multi_target}"
+        s = f"\tName: {self.name}\n"
+        s += f"\tCost: {self.cost} \t Damage: {self.damage}\n"
+        s += f"\tElement: {self.element.value}\t Muli Target: {self.multi_target}"
         return s
