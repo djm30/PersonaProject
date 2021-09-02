@@ -16,7 +16,7 @@ Fucker = p.Persona("Fucker", 160, 20, False, r_list, [Agi])
 Fucker.resistances[2] = resistances["fire"][0]
 print(Fucker)
 
-p.damage_model(Agi, [Fucker])
+h = p.damage_model(Agi, [Fucker])
 
 
 print(Fucker)

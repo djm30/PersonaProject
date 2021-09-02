@@ -84,6 +84,16 @@ class Persona:
             s += str(skill) + "\n"
         return s
 
+    def get_available_skills(self):
+        available_skills = []
+        for skill in self.skills:
+            if skill.element == Element.PHYSICAL or skill.element == Element.GUN:
+                if self.hp - skill.cost > 0:
+                    available_skills.append(skill)
+            else:
+                if self.sp - skill.cost >= 0:
+                    available_skills.append(skill)
+
 
 def damage_model(skill, personas):
     """Caluclates damage done to a persona based on a skill that is attacking its
@@ -100,3 +110,4 @@ def damage_model(skill, personas):
                 damage *= resistance.resistance.value
                 damages.append((damage, resistance.resistance))
         persona.hp = persona.hp - damage
+    return damages

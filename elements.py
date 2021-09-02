@@ -26,7 +26,7 @@ class Resistance(Enum):
         Enum (Enum): built in Python enumeration
     """
     Weak = 1.5
-    Std = 1
+    Std = 1.0
     Strong = 0.75
     Null = 0.0
 
