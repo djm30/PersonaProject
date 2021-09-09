@@ -13,11 +13,11 @@ class Persona:
     skills [list : Skill] : A list of all the skills of a persona
     """
 
-    def __init__(self, name, hp, sp, guard, resistances, skills):
+    def __init__(self, name, hp, sp, resistances, skills):
         self.name = name
         self.hp = hp
         self.sp = sp
-        self.guard = guard
+        self.guard = False
         self.resistances = resistances
         self.skills = skills
 

@@ -13,6 +13,11 @@ FPS = 60
 test1 = pygame.Rect(600, 200, 40, 75)
 
 
+class GameEntity():
+    def __init__(self):
+        pass
+
+
 def draw_characters():
     pygame.draw.rect(WIN, (100, 100, 100), test1)
     test1.x += 1
