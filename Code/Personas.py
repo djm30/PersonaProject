@@ -81,4 +81,5 @@ personas[JackLantern.name] = JackLantern
 personas[Pixie.name] = Pixie
 personas[Zorro.name] = Zorro
 
-print(personas)
+if __name__ == '__main__':
+    print(personas)
