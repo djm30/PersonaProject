@@ -22,7 +22,7 @@ Zorro
 
 personas = {}
 
-JackLantern = Persona("Jack-O'-Lantern", 140.0, 24.0,
+JackLantern = Persona("JackLantern", 140.0, 24.0,
                       [resistances["physical"][1],
                        resistances["gun"][1],
                           resistances["fire"][3],

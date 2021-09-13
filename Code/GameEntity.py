@@ -2,6 +2,8 @@ import pygame
 import os
 from Personas import personas
 
+image_path = "assets//Sprites"
+
 
 class GameEntity():
 
@@ -13,7 +15,7 @@ class GameEntity():
         self.y = y
         self.persona = persona
         self.images = images
-        self.current_image = "standard"
+        self.current_image = "damage"
 
     @property
     def x(self):
@@ -48,16 +50,27 @@ class GameEntity():
         self._current_image = self.images[f"{value}"]
 
 
-Std1 = pygame.image.load(os.path.join("assets", "jacklantern_std.png"))
-Damage1 = pygame.image.load(os.path.join("assets", "jacklantern_damage.png"))
-Select1 = pygame.image.load(os.path.join("assets", "jacklantern_select.png"))
-
-Enemy1 = GameEntity(520, 200, personas["Pixie"], {
-    "standard": Std1, "damage": Damage1, "select": Select1})
-
-
 Entities = []
-Entities.append(Enemy1)
+
+Joker_Std = pygame.image.load(os.path.join(image_path, "joker_std.png"))
+Joker_Damage = pygame.image.load(os.path.join(image_path, "joker_damage.png"))
+
+Joker = GameEntity(200, 340, personas["Pixie"], {
+    "standard": Joker_Std, "damage": Joker_Damage, "select": None})
+
+Entities.append(Joker)
+
+Jack_Std = pygame.image.load(os.path.join(image_path, "jacklantern_std.png"))
+Jack_Damage = pygame.image.load(
+    os.path.join(image_path, "jacklantern_damage.png"))
+Jack_Select = pygame.image.load(
+    os.path.join(image_path, "jacklantern_select.png"))
+
+JackLantern = GameEntity(520, 200, personas["JackLantern"], {
+    "standard": Jack_Std, "damage": Jack_Damage, "select": Jack_Select})
+
+Entities.append(JackLantern)
+
 
 if __name__ == '__main__':
-    print(Enemy1.persona)
+    pass
