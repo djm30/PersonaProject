@@ -48,9 +48,9 @@ class GameEntity():
         self._current_image = self.images[f"{value}"]
 
 
-Std1 = pygame.image.load(os.path.join("assets", "test_sp_std.png"))
-Damage1 = pygame.image.load(os.path.join("assets", "test_sp_damage.png"))
-Select1 = pygame.image.load(os.path.join("assets", "test_sp_select.png"))
+Std1 = pygame.image.load(os.path.join("assets", "jacklantern_std.png"))
+Damage1 = pygame.image.load(os.path.join("assets", "jacklantern_damage.png"))
+Select1 = pygame.image.load(os.path.join("assets", "jacklantern_select.png"))
 
 Enemy1 = GameEntity(520, 200, personas["Pixie"], {
     "standard": Std1, "damage": Damage1, "select": Select1})
